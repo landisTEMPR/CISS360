@@ -3,7 +3,7 @@
 int main()
 {
     int x;
-    int b = 3;
+    int b = 8;
     std::cin >> x;
 
     for (int i = 0; i < 10; ++i)
@@ -11,6 +11,7 @@ int main()
         std::cout << x % b << ' ';
         x = x / b;
     }
+    std::cout << '\n';
     
     return 0;
 }
