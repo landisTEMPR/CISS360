@@ -1,0 +1,160 @@
+%\newcommand\topmattertwo{
+%\topmatter
+%\score \\ \\
+%Open \texttt{main.tex} and enter answers (look for
+%\texttt{answercode}, \texttt{answerbox}, \texttt{answerlong}).
+%Turn the page for detailed instructions.
+%To rebuild and view pdf, in bash shell execute \texttt{make}.
+%To build a gzip-tar file, in bash shell execute \texttt{make s} and
+%you'll get \texttt{submit.tar.gz}.
+%}
+%
+%\newcommand\tf{T or F or M}
+%\newcommand\answerbox[1]{\textbox{\phantom{|}\hspace{-4mm}#1}}
+%\newcommand\codebox[1]{\begin{console}#1\end{console}}
+%
+%\newcommand{\cmark}{\textred{\ding{51}}}
+%\newcommand{\xmark}{\textred{\ding{55}}}
+%
+%\newcounter{qc}
+%\newcommand\nextq{
+%%\newpage
+%\addtocounter{qc}{1}
+%Q{\theqc}.
+%}
+%
+%\DefineVerbatimEnvironment%
+% {answercode}{Verbatim}
+% {frame=single,fontsize=\footnotesize}
+%
+%\newenvironment{largebox}[1]{%
+% \boxparone{#1}
+%}
+%{}
+%
+%
+%% ADDED 2021/09/09
+%\renewcommand\boxpar[1]{
+% \[
+%  \framebox[\textwidth][c] {
+%   \parbox[]{\dimexpr\textwidth - 0.25cm} {#1}
+%  }
+% \]
+%}
+%
+%\NewEnviron{answerlong}%
+%  {\vspace{-1mm} \global\let\tmp\BODY\aftergroup\doboxpar}
+%
+%\newcommand\doboxpar{%
+%  \let\quote=\oldquote
+%  \let\endquote=\endoldquote
+%  \boxpar{\tmp}
+%}
+%
+%\newenvironment{mcq}[7]%
+%{% begin code
+%#1 \dotfill{#2}
+% \begin{tightlist}
+% \item[(A)] #3
+% \item[(B)] #4
+% \item[(C)] #5
+% \item[(D)] #6
+% \item[(E)] #7 
+% \end{tightlist}
+%}%
+%{% end code
+%} 
+%
+%\renewcommand\EMAIL{}
+%\newcommand\score{%
+%\vspace{-0.6in}
+%\begin{flushright}
+%Score: \answerbox{\POINTS}
+%\end{flushright}
+%\vspace{-0.4in}
+%\hspace{0.7in}\AUTHOR
+%\vspace{0.2in}
+%}
+%
+%\newcommand\blankline{\mbox{}\\ }
+%
+%\newcommand\ANSWER{\textsc{Answer:}\vspace{-2mm}}
+%
+%\newcommand\LATEXHELPTHREEFIVEZERO{
+%In the \texttt{answerlong}, you will need to enter \LaTeX\ code for
+%mathematical notation.
+%Some incomplete or wrong answers are included in the \texttt{answerlong}
+%so that all you need to do is to make minor modifications.
+%Note that \texttt{answercode} is for writing code/pseudocode and
+%does not require mathematical notation.
+%
+%Here are some pointers on writing math \LaTeX\ code:
+%\begin{enumerate}[nosep]
+%
+%\item For \lq\lq inline math mode", use \texttt{\$...\$}.
+%Example: \texttt{\$x\ =\ 42\ +\ y\$} gives you $x = 42 + y$.
+%(Mathematical expressions have their own spacing, special symbols,
+%and are in italics.)
+%
+%\item For \lq\lq display math mode", use \texttt{\textbackslash[...\textbackslash]}.
+%Example: \texttt{\textbackslash[\ x\ =\ 42 \textbackslash]} gives you \[ x = 42 \]
+%(Display math mode is used for emphasis.)
+%
+%\item Here's how you do fractions:
+%\texttt{\$\textbackslash frac\{1\}\{2\}\$} gives you $\frac{1}{2}$.
+%
+%\item Here's how you do subscript:
+%\texttt{\$t\_\{123\}\$} gives you $t_{123}$. 
+%
+%\item Here's how you do superscript:
+%\texttt{\$n\^{}\{123\}\$} gives you $n^{123}$.
+%\end{enumerate}
+%
+%The above information should be enough for this quiz.
+%For more information on \LaTeX\, you can go to
+%\href{http://bit.ly/yliow0/}{my website},
+%click on Yes you are one of my students, scroll down to the Tutorials
+%section and click on latex.pdf.
+%}
+%
+%\newcommand\LATEXHELPTHREEFIVEZEROB{
+%In the \texttt{answerlong}, you will need to enter \LaTeX\ code for
+%mathematical notation.
+%Some incomplete or wrong answers are included in the \texttt{answerlong}
+%so that all you need to do is to make minor modifications.
+%Note that \texttt{answercode} is for writing code/pseudocode and
+%does not require mathematical notation.
+%
+%Here are some pointers on writing math \LaTeX\ code:
+%\begin{enumerate}[nosep]
+%
+%\item For \lq\lq inline math mode", use \texttt{\$...\$}.
+%Example: \texttt{\$x\ =\ 42\ +\ y\$} gives you $x = 42 + y$.
+%(Mathematical expressions have their own spacing, special symbols,
+%and are in italics.)
+%
+%\item For \lq\lq display math mode", use \texttt{\textbackslash[...\textbackslash]}.
+%Example: \texttt{\textbackslash[\ x\ =\ 42 \textbackslash]} gives you \[ x = 42 \]
+%(Display math mode is used for emphasis.)
+%
+%\item Here's how you do fractions:
+%\texttt{\$\textbackslash frac\{1\}\{2\}\$} gives you $\frac{1}{2}$.
+%
+%\item Here's how you do subscript:
+%\texttt{\$t\_\{123\}\$} gives you $t_{123}$. 
+%
+%\item Here's how you do superscript:
+%  \texttt{\$n\^{}\{123\}\$} gives you $n^{123}$.
+%  
+%\item Here's how you do log:
+%  \texttt{\$\textbackslash lg n\$} gives you $\lg n$.
+%\end{enumerate}
+%
+%The above information should be enough for this quiz.
+%For more information on \LaTeX\, you can go to
+%\href{http://bit.ly/yliow0/}{my website},
+%click on Yes you are one of my students, scroll down to the Tutorials
+%section and click on latex.pdf.
+%}
+%
+%

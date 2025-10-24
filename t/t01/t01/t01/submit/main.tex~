@@ -1,0 +1,687 @@
+\input{myquizpreamble}
+\input{yliow}
+\input{ciss240}
+\renewcommand\TITLE{Test 1}
+
+\renewcommand\solution[1]{ 
+%\textwhite{#1}
+\textred{
+%#1
+} 
+}
+
+\newcommand\newnewbox[1]{ 
+  \newsolutionbox{1.25}{0.4}{ 
+    \begin{center}
+      #1 
+    \end{center}
+  } 
+}
+
+\newcommand\newnewnewbox[1]{ 
+  \newsolutionbox{0.75}{0.4}{ 
+    \begin{center}
+      #1 
+    \end{center}
+  } 
+}
+
+\begin{comment}
+Write answerbox() in python.
+
+answerbox(5) ---> box with 5
+answerbox(5, width='2cm', height='1cm') ---> box with 5
+answerbox(5, size='Large')
+answerbox(5, show=True) ... default = False
+\end{comment}
+
+
+
+\begin{document}
+\topmatter
+
+\textsc{Instructions}
+\begin{enumerate}
+\li This is a closed-book, no-discussion, no-calculator, no-computer
+    test.
+\li Cheating is a serious academic offense. If caught you will 
+    receive an immediate score of -100\%.
+\li If a question asks for a program output and the program contains
+    an error, write \verb!ERROR! as output.
+\li When writing output, use one cell for each output character.
+\li If a question asks the computation of a value and the program or
+    code fragment contains
+    an error, write \verb!ERROR! as value.
+\li When you're asked to write a C++ statement, don't forget that it must
+    end with a semicolon.
+\li Bubblesort refers to the bubblesort algorithm in our notes
+where values are sorted in ascending order.
+\end{enumerate}
+
+\newpage
+
+
+\begin{python}
+from latextool_basic import *
+p = Plot()
+m00 = [['Question']]
+m10 = [[i] for i in range(1, 26)]
+m01 = [['Points'],
+]
+m11 =[[''] for i in range(1, 26)]
+
+M = [[m00, m01],
+[m10, m11]]
+N = table3(p, M, width=3, height=0.7)
+print p
+\end{python}
+
+
+\newpage
+\begin{enumerate}
+
+\item 
+\begin{python}
+x = 14
+y = 3
+print r'''
+As a C++ expression, the value of \verb!%s / %s! is 
+\newnewbox{\solution{%s}}''' % (x, y, x/y)
+\end{python}
+
+\begin{python}
+x = 14
+y = 3
+print r'''
+As a C++ expression, the value of \verb!%s %% %s! is 
+\newnewbox{\solution{%s}}''' % (x, y, x % y)
+\end{python}
+
+
+\begin{python}
+x = 14
+y = 1
+print r'''
+As a C++ expression, the value of \verb!%s %% %s! is 
+\newnewbox{\solution{%s}}''' % (x, y, x % y)
+\end{python}
+
+\begin{python}
+x = 14
+y = 0
+print r'''
+As a C++ expression, the value of \verb!%s %% %s! is 
+\newnewbox{\solution{%s}}''' % (x, y, 'ERROR')
+\end{python}
+
+
+\item Circle the \textit{fifth} operator that gets to be evaluated:
+\begin{console}[frame=none]
+
+        1 + 2 * 3 % (3 + 2) * (3 - 2 / 3) + 4
+
+\end{console}
+
+
+\item What is the value of the following integer expression?
+\begin{console}[frame=none]
+
+        1 + 2 * 3 % 3 + 2 - (3 - 2 / 3) + 4
+
+\end{console}
+ANSWER: \newnewbox{} % (1 + 2 * 3 % 3 + 2 - (3 - 2 / 3) + 4)
+
+\item 
+Complete the following code fragment
+\begin{console}[commandchars=\\\{\}]
+
+std::cout << 123456789 % \newnewbox{\textwhite{111111111}} / \newnewbox{\textwhite{111111111}} 
+          << std::endl;
+
+\end{console}
+so that the output is
+\begin{console}
+56
+\end{console}
+
+
+
+
+\newpage
+\item Implement the following mathematical 
+formula in C++ as a complete C++ statement
+assuming that all the relevant \verb!double! variables are already declared
+and hold values.
+Do \textit{not} use any functions such as \verb!pow!.
+\[
+z = \frac{(a + b)^2}{(c - d)^3 + 1} + e
+\]
+ANSWER:
+\begin{console}[commandchars=\\\{\}]
+// Assume variables a, b, c, d, e, z are already declared
+
+z = \solution{(a + b) * (a + b) / ((c - d) * (c - d) * (c - d) + 1) + e;}
+
+\end{console}
+
+
+\item Look at the following statement:
+\begin{console}
+int x = 4.5;
+\end{console}
+Check the statement that is true:
+\begin{enumerate}
+
+\item[\qed] The statement is an error because you cannot assign a \verb!double! value to an \verb!int! variable.
+
+\item[\qed] %\solution{\hskip-0.7cm X \hskip0.25cm} 
+The \verb!double! value \verb!4.5! is converted to an \verb!int! value of
+\verb!4! which is then assigned to \verb!x!.
+\end{enumerate}
+
+
+
+
+\item 
+The string length of the string \verb@"He said, \"1\t2\t3\t!!!\""@ is
+\newnewbox{
+%20
+}
+
+
+
+
+
+\newpage
+\item
+The area of a trapezoid 
+\begin{center}
+\includegraphics[width=3in]{trapezoid.jpg} 
+\end{center}
+is given by 
+\[
+\frac{1}{2} (a + b) h
+\]
+Write a program that prompts the user for \textit{integer} values for
+\verb!a!, \verb!b!, and \verb!h! and prints the area.
+Do not declare \verb!double! variables.
+\begin{console}[commandchars=\~\!\@]
+#include <iostream>
+
+int main()
+{
+    ~solution!int a = 0, b = 0, h = 0;@
+    ~solution!std::cin >> a >> b >> h;@
+    ~solution!std::cout << 0.5 * (a + b) / h << std::endl;;@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
+\end{console}
+
+
+
+\newpage
+\item 
+Complete the following truth table of the \verb!&&! and \verb!||!
+operators:
+{\large
+\texttt{
+\begin{longtable}{|c|c|c|}
+\hline
+b1 & b2 & b1 \&\& b2 \\ \hline
+true  & true  &  \solution{true} \\ \hline
+true  & false &  \solution{false} \\ \hline 
+false & true  &  \solution{false} \\ \hline
+false & false &  \solution{false} \\ \hline
+\end{longtable}
+\begin{longtable}{|c|c|c|}
+\hline
+b1 & b2 & b1 || b2 \\ \hline
+true  & true  &  \solution{true} \\ \hline
+true  & false &  \solution{true} \\ \hline 
+false & true  &  \solution{true} \\ \hline
+false & false &  \solution{true} \\ \hline
+\end{longtable}
+\begin{longtable}{|c|c|}
+\hline
+b1    & \,\,\, !b1 \,\,\, \\ \hline
+true  & \solution{true\hspace{1cm}\mbox{}11111} \\ \hline
+false & \solution{true} \\ \hline
+\end{longtable}
+}
+}
+
+
+
+
+\item What is the boolean value of the following expression
+\begin{console}
+true && !(false || true && false)
+\end{console}
+ANSWER: \newnewbox{\textwhite{111111111}}
+
+\begin{console}
+true && !(true || false && false)
+\end{console}
+ANSWER: \newnewbox{\textwhite{111111111}}
+
+\begin{console}
+false && !(true || false && true)
+\end{console}
+ANSWER: \newnewbox{\textwhite{111111111}}
+
+\newpage
+\item The values of \verb!x!, \verb!y!, \verb!z! are (respectively)
+\verb!1!, \verb!2!, \verb!3!.
+What is the boolean value of the following expression
+\begin{console}
+x < y + z || x * y < z && z % y > x
+\end{console}
+ANSWER: \newnewbox{\textwhite{111111111}}
+
+
+\item
+\begin{samepage}
+Simplify the following boolean expression:
+\begin{console}
+(x < y == true) && !(x > y || y == w) || (x == 1 && 1 == x)
+\end{console}
+ANSWER:
+\begin{console}
+
+
+\end{console}
+\end{samepage}
+
+\item 
+The \verb!double! variables \verb!a! and \verb!b! are already declared
+and hold values.
+Write a code fragment to swap their values.
+You can declare only one extra variable.
+
+ANSWER:
+\begin{console}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{console}
+
+\newpage
+\item 
+What is the output of the following program:
+\begin{console}
+int x = 0;
+double y = 3.14;
+const int z = 4;
+
+x = x + y;
+y = y + z;
+z = z + x;
+x = x + y * z;
+
+std::cout << x << std::endl;
+
+\end{console}
+OUTPUT:
+\begin{python}
+from latextool_basic import *
+print consolegrid(numrows=3)
+\end{python}
+
+
+
+
+
+
+\newpage
+\item 
+Trace the following code fragment and report on the value of the 
+indicated variables after executing the code:
+\begin{console}
+int i = 1;
+int j = 2;
+int k = 4;
+
+k = k + i;
+i = i + j;
+
+k = k + i;
+i = i + j;
+
+k = k + i;
+i = i + j;
+
+k = k + i;
+i = i + j;
+\end{console}
+ANSWER:
+
+Value of \verb!i!: \newnewbox{\textwhite{111111111}}
+
+Value of \verb!j!: \newnewbox{\textwhite{111111111}}
+
+Value of \verb!k!: \newnewbox{\textwhite{111111111}}
+
+
+
+\newpage
+\item 
+Using the \verb!rand()! function, write down an expression
+that will give us a random integer in the range from \verb!1! to \verb!6!
+(inclusive).
+
+ANSWER:
+\begin{console}
+
+
+
+\end{console}
+
+\solution{
+%GRADING: 
+%\begin{tightlist}
+%\li \texttt{\%6}: 4 points
+%\li \texttt{+1}: 2 points for +, 4 points for 1
+%\li -1 point for 
+%\texttt{rand} without \texttt{()} or \texttt{rand(int)} or etc.
+%\end{tightlist}
+}
+
+
+
+
+
+\item
+Using the \verb!rand()! function, write down an expression
+that will give us a random \verb!double! in the range 
+from \verb!-2.0! to \verb!2.0!.
+
+ANSWER:
+\begin{console}
+
+
+
+\end{console}
+
+
+
+\begin{comment}
+\newpage
+\item 
+According to the bubblesort algorithm in our notes (up to this point),
+if you are performing the algorithm on 10 values, how many passes do you 
+need to completely sort the values?
+
+ANSWER: \newnewbox{\textwhite{111111111}}
+\end{comment}
+
+\newpage
+\item 
+You have a collection of variables 
+\texttt{x0},
+\texttt{x1},
+\texttt{x2},
+\texttt{x3},
+\texttt{x4}, and
+\texttt{x5}
+containing the following
+variables (respectively)
+\[
+\text{
+\texttt{4},
+\texttt{2},
+\texttt{6},
+\texttt{9},
+\texttt{6},
+\texttt{7}}
+\]
+
+Execute Pass 1 and Pass 2
+%and Pass 3
+of the bubblesort and list their values.
+
+After Pass 1:
+\begin{python}
+from latextool_basic import *
+plot = Plot()
+plot += Array2d(width=1.5, height=1, xs=[['' for _ in range(6)]])
+print plot
+\end{python}
+
+%[Hint: at the end of Pass 1, the largest value is in the correct variable.]
+
+After Pass 2:
+\begin{python}
+from latextool_basic import *
+plot = Plot()
+plot += Array2d(width=1.5, height=1, xs=[['' for _ in range(6)]])
+print plot
+\end{python}
+
+
+%After Pass 3:
+%\begin{python}
+%from latextool_basic import *
+%plot = Plot()
+%plot += Array2d(width=1.5, height=1, xs=[['' for _ in range(6)]])
+%print plot
+%\end{python}
+
+How many passes must be executed on 6 variables to ensure that
+the values are sorted?
+
+ANSWER: \newnewbox{}
+
+
+\begin{comment}
+\item 
+You have 6 \verb!double! variables, 
+\texttt{x0},
+\texttt{x1},
+\texttt{x2},
+\texttt{x3},
+\texttt{x4}, and
+\texttt{x5}.
+Using bubblesort, you want to compute the third largest value among 
+the variables.
+How many passes do you need and which variable will hold this value?
+
+ANSWER: 
+\newnewbox{\textwhite{111111111}}
+\newnewbox{\textwhite{111111111}}
+\end{comment}
+
+\newpage
+\item 
+There are 3 \verb!double! 
+variables \verb!x0!, \verb!x1!, and \verb!x2!.
+Write a code fragment to 
+sort the values in the variables in ascending order.
+\begin{console}
+double t = 0.0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{console}
+
+
+%Grading: 
+%\begin{tightlist}
+%\li -2 points if no blocks throughout.
+%\li If second pass missing: 6.7 points total
+%\end{tightlist}
+
+
+
+\newpage
+\item 
+Write a program that performs integer division.
+Here are some test runs (underline indicates user input):
+
+TEST 1:
+\begin{console}[commandchars=\\\{\}]
+\underline{7 2}
+3
+\end{console}
+
+TEST 2:
+\begin{console}[commandchars=\\\{\}]
+\underline{7 0}
+I cannot divide by 0!!!
+\end{console}
+
+ANSWER:
+\begin{console}
+#include <iostream>
+
+int main()
+{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
+\end{console}
+
+
+\newpage
+\item 
+What is the output of the following code fragment:
+\begin{console}
+int x = 0, y = 1, z = 2;
+
+if (x < 0)
+{
+    std::cout << 'A';
+    if (y < 10)
+    {
+        std::cout << 'B';
+    }
+    else
+    {
+        std::cout << 'C';
+    }
+    std::cout << 'D';
+}
+else
+{
+    std::cout << 'E';
+    if (y < 1000)
+    {
+        std::cout << 'F';
+    }
+    else
+    {
+        std::cout << 'G';
+    }
+    std::cout << 'H';
+}
+\end{console}
+ANSWER:
+\begin{python}
+from latextool_basic import *
+print consolegrid(numrows=3)
+\end{python}
+
+
+
+\begin{comment}
+\newpage
+\item 
+What is the output of the following code fragment:
+\begin{console}
+int x = 42, y = 43;
+
+std::cout << 'a';
+if (x < 40)
+    if (y > -1)
+        std::cout << 'b';
+else
+    std::cout << 'c';
+\end{console}
+ANSWER:
+\begin{python}
+from latextool_basic import *
+print consolegrid(numrows=5)
+\end{python}
+\end{comment}
+
+
+\end{enumerate}
+
+
+\end{document}

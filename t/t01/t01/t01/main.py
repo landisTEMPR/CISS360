@@ -1,0 +1,2 @@
+from scoretable import *
+

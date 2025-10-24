@@ -1,0 +1,30 @@
+By the way, your pay
+is in jeopardy if the boss can't read your handwriting.
+So write neatly!
+
+Specifically:
+\begin{itemize}
+\li Write your scratch work on scratch paper. 
+\li To correct code, circle or box up and cross out the wrong code, write and circle or box up the correct code somewhere, and draw an arrow from your correct code to the code that is crossed out.
+\end{itemize}
+Here are some examples:
+\begin{python}
+from latextool_basic import *
+p = Plot()
+p += ellipse(x0=0,y0=0,x1=5,y1=2,label=r'\texttt{add s0,s0,s0}',name='A')
+p += cross(x0=0,y0=0,x1=5,y1=2)
+
+p += ellipse(x0=7,y0=0+1,x1=7+5,y1=2+1,label=r'\texttt{add \$s0,\$s0,\$s0}',name='B')
+p += Line(names=['B', 'A'], endstyle='>')
+print(p)
+\end{python}
+\begin{python}
+from latextool_basic import *
+p = Plot()
+p += Rect(x0=0,y0=0,x1=5,y1=2,label=r'\texttt{add s0,s0,s0}',name='A')
+p += cross(x0=0,y0=0,x1=5,y1=2)
+
+p += Rect(x0=7,y0=0+1,x1=7+5,y1=2+1,label=r'\texttt{add \$s0,\$s0,\$s0}',name='B')
+p += Line(names=['B', 'A'], endstyle='>')
+print(p)
+\end{python}
